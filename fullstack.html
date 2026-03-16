@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full Stack Development  Aditi Kshetri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav id="topnav">
+  <div class="nav-inner">
+    <a class="nav-sig" href="index.html">Aditi <em>Kshetri</em></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fullstack.html" class="active">Full Stack</a></li>
+      <li><a href="html.html">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div><div class="page-hero-glow"></div>
+  <div class="page-hero-inner">
+    <div class="page-crumb"><a href="index.html">Home</a> <span>/</span> Full Stack Development</div>
+    <div class="page-hero-label">01 / What is</div>
+    <h1 class="page-hero-title">Full Stack<br/><em>Development</em></h1>
+    <p class="page-hero-sub">Full stack development spans every layer of a web application the browser, the server, and the database allowing a single developer to build complete, end-to-end products.</p>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <div class="sec-header reveal">
+    <div class="sec-num">01 / What is</div>
+    <h2 class="sec-title">Full Stack<br/><em>Development</em></h2>
+    <p class="sec-lead">Full stack development spans every layer of a web application the browser, the server, and the database allowing a single developer to build complete, end-to-end products.</p>
+  </div>
+
+  <div class="split-60">
+    <div>
+      <div class="stack-layers reveal">
+        <div class="stack-row sr-fe">
+          <div class="sr-label">Front End</div>
+          <div><div class="sr-name">Client Layer</div><div class="sr-desc">HTML · CSS · JavaScript · Bootstrap · React</div></div>
+          <span class="etag etag-gold">Browser</span>
+        </div>
+        <div class="stack-row sr-be">
+          <div class="sr-label">Back End</div>
+          <div><div class="sr-name">Server Layer</div><div class="sr-desc">Node.js · Express · Python · REST APIs</div></div>
+          <span class="etag etag-sage">Server</span>
+        </div>
+        <div class="stack-row sr-db">
+          <div class="sr-label">Database</div>
+          <div><div class="sr-name">Data Layer</div><div class="sr-desc">MySQL · PostgreSQL · MongoDB · Redis</div></div>
+          <span class="etag etag-rust">Storage</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem">
+        <div class="elegant-card reveal reveal-d1"><div class="ec-icon">🖥️</div><div class="ec-title">Front End</div><div class="ec-body">Everything the user sees and interacts with. Powered by HTML, CSS, and JavaScript.</div><div class="tag-row"><span class="etag etag-gold">HTML</span><span class="etag etag-gold">CSS</span><span class="etag etag-gold">JS</span></div></div>
+        <div class="elegant-card reveal reveal-d2"><div class="ec-icon">⚙️</div><div class="ec-title">Back End</div><div class="ec-body">Server logic, authentication, APIs, and data processing — invisible to users.</div><div class="tag-row"><span class="etag etag-sage">Node.js</span><span class="etag etag-sage">APIs</span></div></div>
+        <div class="elegant-card reveal reveal-d3"><div class="ec-icon">🗄️</div><div class="ec-title">Database</div><div class="ec-body">Persistent storage in SQL (relational) or NoSQL (document) format.</div><div class="tag-row"><span class="etag etag-rust">MySQL</span><span class="etag etag-rust">MongoDB</span></div></div>
+        <div class="elegant-card reveal reveal-d1"><div class="ec-icon">🚀</div><div class="ec-title">DevOps</div><div class="ec-body">Git version control, cloud hosting, and CI/CD pipelines round out the stack.</div><div class="tag-row"><span class="etag etag-gold">Git</span><span class="etag etag-sage">Docker</span></div></div>
+      </div>
+    </div>
+    <div class="timeline-v reveal">
+      <div class="tv-item"><div class="tv-dot"></div><div class="tv-title">User Requests a Page</div><div class="tv-text">The browser sends an HTTP request to the server when a user navigates to a URL or clicks a link.</div></div>
+      <div class="tv-item"><div class="tv-dot"></div><div class="tv-title">Server Processes Request</div><div class="tv-text">Back-end code handles routing, applies business logic, and queries the database for required data.</div></div>
+      <div class="tv-item"><div class="tv-dot"></div><div class="tv-title">Database Returns Data</div><div class="tv-text">Records are retrieved and sent back to the server, which assembles a response.</div></div>
+      <div class="tv-item"><div class="tv-dot"></div><div class="tv-title">Browser Renders Page</div><div class="tv-text">HTML/JSON is returned and the browser uses CSS and JavaScript to paint the final visible interface.</div></div>
+    </div>
+  </div>
+
+  <div class="page-nav-bar">
+    <span class="pnav-btn disabled">← Previous</span>
+    <span style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--muted);">1 / 5</span>
+    <a href="html.html" class="pnav-btn">HTML →</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span class="f-name"><em>Aditi</em> Kshetri</span>
+  <nav class="footer-nav"><a href="index.html">Home</a><a href="fullstack.html">Full Stack</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="javascript.html">JavaScript</a></nav>
+  CET138 Full Stack Development · Assignment 1 · ePortfolio
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script>const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));</script>
+</body>
+</html>

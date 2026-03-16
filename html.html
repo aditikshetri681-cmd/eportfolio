@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Aditi Kshetri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav id="topnav">
+  <div class="nav-inner">
+    <a class="nav-sig" href="index.html">Aditi <em>Kshetri</em></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="fullstack.html">Full Stack</a></li>
+      <li><a href="html.html" class="active">HTML</a></li>
+      <li><a href="css.html">CSS</a></li><li><a href="bootstrap.html">Bootstrap</a></li><li><a href="javascript.html">JavaScript</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div><div class="page-hero-glow"></div>
+  <div class="page-hero-inner">
+    <div class="page-crumb"><a href="index.html">Home</a> <span>/</span> HTML</div>
+    <div class="page-hero-label">02 / Markup</div>
+    <h1 class="page-hero-title">HTML <br/><em>Structure</em></h1>
+    <p class="page-hero-sub">HyperText Markup Language defines the skeleton of every web page headings, paragraphs, forms, tables, links using a system of nested, semantic elements.</p>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <div class="sec-header reveal">
+    <div class="sec-num">02 / Markup</div>
+    <h2 class="sec-title">HTML<br/><em>Structure</em></h2>
+    <p class="sec-lead">HyperText Markup Language defines the skeleton of every web page headings, paragraphs, forms, tables, links using a system of nested, semantic elements.</p>
+  </div>
+
+  <div class="split-50">
+    <div>
+      <div class="code-block reveal">
+        <div class="cb-header"><div class="cb-dots"><span class="cd-r"></span><span class="cd-y"></span><span class="cd-g"></span></div><span class="cb-lang">HTML5</span></div>
+        <div class="cb-body"><pre><span class="cmt">&lt;!-- Semantic HTML document structure --&gt;</span>
+<span class="tag">&lt;!DOCTYPE</span> <span class="attr">html</span><span class="tag">&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="val">"en"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="val">"UTF-8"</span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;title&gt;</span>Aditi Kshetri — Portfolio<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+
+  <span class="tag">&lt;header&gt;</span>
+    <span class="tag">&lt;nav&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="val">"#home"</span><span class="tag">&gt;</span>Home<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;/nav&gt;</span>
+  <span class="tag">&lt;/header&gt;</span>
+
+  <span class="tag">&lt;main&gt;</span>
+    <span class="tag">&lt;article&gt;</span>
+      <span class="tag">&lt;h1&gt;</span>About Aditi<span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;p&gt;</span>Junior Full Stack Developer<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;ul&gt;</span>
+        <span class="tag">&lt;li&gt;</span>HTML &amp; CSS<span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;li&gt;</span>JavaScript<span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;li&gt;</span>Bootstrap<span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;/ul&gt;</span>
+    <span class="tag">&lt;/article&gt;</span>
+  <span class="tag">&lt;/main&gt;</span>
+
+  <span class="tag">&lt;footer&gt;</span>
+    <span class="tag">&lt;p&gt;</span>&amp;copy; 2025 Aditi Kshetri<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/footer&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></pre></div>
+      </div>
+    </div>
+
+    <div class="reveal reveal-d1">
+      <div class="demo-frame" style="margin-bottom:1.5rem">
+        <div class="demo-frame-header"><div class="df-dot"></div><span class="df-label">Live Render</span></div>
+        <div class="demo-frame-body">
+          <div class="html-render">
+            <h2>About Aditi</h2>
+            <p>Junior Full Stack Developer building modern web applications.</p>
+            <ul><li>HTML &amp; CSS</li><li>JavaScript</li><li>Bootstrap Framework</li></ul>
+            <table><tr><th>Skill</th><th>Level</th></tr><tr><td>HTML</td><td>Advanced</td></tr><tr><td>CSS</td><td>Advanced</td></tr><tr><td>JavaScript</td><td>Intermediate</td></tr></table>
+            <form onsubmit="return false"><input type="text" placeholder="Your name"/><button>Submit</button></form>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+        <div class="elegant-card"><div class="ec-icon">🏗️</div><div class="ec-title">Semantic Tags</div><div class="ec-body">Elements like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;article&gt;</code> give meaningful structure for SEO and accessibility.</div></div>
+        <div class="elegant-card"><div class="ec-icon">📋</div><div class="ec-title">Forms</div><div class="ec-body">Input types like <code>text</code>, <code>email</code>, <code>checkbox</code> collect user data with built-in validation.</div></div>
+        <div class="elegant-card"><div class="ec-icon">🔗</div><div class="ec-title">Links &amp; Media</div><div class="ec-body"><code>&lt;a&gt;</code> for hyperlinks; <code>&lt;img&gt;</code> with <code>alt</code> text for images and screen readers.</div></div>
+        <div class="elegant-card"><div class="ec-icon">♿</div><div class="ec-title">Accessibility</div><div class="ec-body">ARIA attributes and heading hierarchy ensure content is usable by assistive technologies.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-nav-bar">
+    <a href="fullstack.html" class="pnav-btn">← Full Stack</a>
+    <span style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--muted);">2 / 5</span>
+    <a href="css.html" class="pnav-btn">CSS →</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span class="f-name"><em>Aditi</em> Kshetri</span>
+  <nav class="footer-nav"><a href="index.html">Home</a><a href="fullstack.html">Full Stack</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="javascript.html">JavaScript</a></nav>
+  CET138 Full Stack Development · Assignment 1 · ePortfolio
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script>const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));</script>
+</body>
+</html>

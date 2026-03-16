@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Aditi Kshetri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav id="topnav">
+  <div class="nav-inner">
+    <a class="nav-sig" href="index.html">Aditi <em>Kshetri</em></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="fullstack.html">Full Stack</a></li><li><a href="html.html">HTML</a></li>
+      <li><a href="css.html" class="active">CSS</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li><li><a href="javascript.html">JavaScript</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div><div class="page-hero-glow"></div>
+  <div class="page-hero-inner">
+    <div class="page-crumb"><a href="index.html">Home</a> <span>/</span> CSS</div>
+    <div class="page-hero-label">03 / Presentation</div>
+    <h1 class="page-hero-title">CSS —<br/><em>Styling</em></h1>
+    <p class="page-hero-sub">Cascading Style Sheets transform plain HTML into polished interfaces. CSS handles colour, typography, layout (Flexbox &amp; Grid), responsive behaviour, and animations.</p>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <div class="sec-header reveal">
+    <div class="sec-num">03 / Presentation</div>
+    <h2 class="sec-title">CSS<br/><em>Styling</em></h2>
+    <p class="sec-lead">Cascading Style Sheets transform plain HTML into polished interfaces. CSS handles colour, typography, layout (Flexbox &amp; Grid), responsive behaviour, and animations.</p>
+  </div>
+
+  <div class="split-50">
+    <div class="code-block reveal">
+      <div class="cb-header"><div class="cb-dots"><span class="cd-r"></span><span class="cd-y"></span><span class="cd-g"></span></div><span class="cb-lang">CSS3</span></div>
+      <div class="cb-body"><pre><span class="cmt">/* CSS Custom Properties */</span>
+<span class="tag">:root</span> {
+  <span class="attr">--gold</span>:    <span class="val">#c9a84c</span>;
+  <span class="attr">--ink</span>:     <span class="val">#0c0b09</span>;
+  <span class="attr">--radius</span>:  <span class="val">4px</span>;
+}
+
+<span class="cmt">/* Flexbox Navigation */</span>
+<span class="tag">.navbar</span> {
+  <span class="attr">display</span>:          <span class="val">flex</span>;
+  <span class="attr">justify-content</span>: <span class="val">space-between</span>;
+  <span class="attr">align-items</span>:      <span class="val">center</span>;
+  <span class="attr">padding</span>:          <span class="val">1rem 2rem</span>;
+}
+
+<span class="cmt">/* CSS Grid layout */</span>
+<span class="tag">.card-grid</span> {
+  <span class="attr">display</span>:               <span class="val">grid</span>;
+  <span class="attr">grid-template-columns</span>: <span class="val">repeat(3, 1fr)</span>;
+  <span class="attr">gap</span>:                   <span class="val">1.5rem</span>;
+}
+
+<span class="cmt">/* Hover transition */</span>
+<span class="tag">.card</span> {
+  <span class="attr">transition</span>: <span class="val">transform .25s ease,
+              box-shadow .25s ease</span>;
+  <span class="attr">border-radius</span>: <span class="val">var(--radius)</span>;
+}
+<span class="tag">.card:hover</span> {
+  <span class="attr">transform</span>:  <span class="val">translateY(-4px)</span>;
+  <span class="attr">box-shadow</span>: <span class="val">0 12px 30px rgba(0,0,0,.1)</span>;
+}
+
+<span class="cmt">/* Responsive breakpoint */</span>
+<span class="tag">@media</span> (<span class="attr">max-width</span>: <span class="val">768px</span>) {
+  <span class="tag">.card-grid</span> {
+    <span class="attr">grid-template-columns</span>: <span class="val">1fr</span>;
+  }
+}</pre></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1.2rem" class="reveal reveal-d1">
+      <div class="demo-frame">
+        <div class="demo-frame-header"><div class="df-dot"></div><span class="df-label">Flexbox Layout</span></div>
+        <div class="demo-frame-body" style="padding:1rem">
+          <div class="flex-demo-warm"><div class="fw-item">Item 1</div><div class="fw-item">Item 2</div><div class="fw-item">Item 3</div></div>
+          <p style="font-family:'DM Mono',monospace;font-size:.68rem;color:var(--muted);margin-top:.6rem">display:flex · justify-content:space-around</p>
+        </div>
+      </div>
+      <div class="demo-frame">
+        <div class="demo-frame-header"><div class="df-dot"></div><span class="df-label">CSS Animations</span></div>
+        <div class="demo-frame-body" style="padding:1rem">
+          <div class="anim-bars"><div class="anim-bar ab1"></div><div class="anim-bar ab2"></div><div class="anim-bar ab3"></div><div class="anim-bar ab4"></div><div class="anim-bar ab5"></div></div>
+          <p style="font-family:'DM Mono',monospace;font-size:.68rem;color:var(--muted);margin-top:.6rem">@keyframes · animation-delay stagger</p>
+        </div>
+      </div>
+      <div class="demo-frame">
+        <div class="demo-frame-header"><div class="df-dot"></div><span class="df-label">Linear Gradient</span></div>
+        <div class="demo-frame-body" style="padding:1rem"><div class="grad-strip">linear-gradient(90deg, ink → gold → rust → sage)</div></div>
+      </div>
+      <div class="demo-frame">
+        <div class="demo-frame-header"><div class="df-dot"></div><span class="df-label">Box Model</span></div>
+        <div class="demo-frame-body" style="padding:1rem"><div class="boxmodel-demo">margin → border → padding → content</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem">
+    <div class="elegant-card reveal"><div class="ec-icon">📦</div><div class="ec-title">Box Model</div><div class="ec-body">Every element is a box with <code>content</code>, <code>padding</code>, <code>border</code>, and <code>margin</code> — the foundation of all spacing and layout.</div></div>
+    <div class="elegant-card reveal reveal-d1"><div class="ec-icon">🔲</div><div class="ec-title">Flexbox &amp; Grid</div><div class="ec-body">Flexbox handles 1D row/column flows; Grid enables powerful 2D layouts. Together they replace older float-based hacks entirely.</div></div>
+    <div class="elegant-card reveal reveal-d2"><div class="ec-icon">📱</div><div class="ec-title">Responsive Design</div><div class="ec-body"><code>@media</code> queries let styles adapt fluidly across mobile, tablet, and desktop without separate codebases.</div></div>
+  </div>
+
+  <div class="page-nav-bar">
+    <a href="html.html" class="pnav-btn">← HTML</a>
+    <span style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--muted);">3 / 5</span>
+    <a href="bootstrap.html" class="pnav-btn">Bootstrap →</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span class="f-name"><em>Aditi</em> Kshetri</span>
+  <nav class="footer-nav"><a href="index.html">Home</a><a href="fullstack.html">Full Stack</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="javascript.html">JavaScript</a></nav>
+  CET138 Full Stack Development · Assignment 1 · ePortfolio
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script>const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));</script>
+</body>
+</html>

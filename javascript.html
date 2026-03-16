@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript  Aditi Kshetri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav id="topnav">
+  <div class="nav-inner">
+    <a class="nav-sig" href="index.html">Aditi <em>Kshetri</em></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="fullstack.html">Full Stack</a></li><li><a href="html.html">HTML</a></li><li><a href="css.html">CSS</a></li><li><a href="bootstrap.html">Bootstrap</a></li>
+      <li><a href="javascript.html" class="active">JavaScript</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div><div class="page-hero-glow"></div>
+  <div class="page-hero-inner">
+    <div class="page-crumb"><a href="index.html">Home</a> <span>/</span> JavaScript</div>
+    <div class="page-hero-label">05 / Behaviour</div>
+    <h1 class="page-hero-title">JavaScript <br/><em>Interactivity</em></h1>
+    <p class="page-hero-sub">JavaScript brings pages to life DOM manipulation, event handling, fetch API calls, and complex application logic, all running in the browser without a reload.</p>
+  </div>
+</div>
+
+<div class="page-wrap">
+  <div class="sec-header reveal">
+    <div class="sec-num">05 / Behaviour</div>
+    <h2 class="sec-title">JavaScript<br/><em>Interactivity</em></h2>
+    <p class="sec-lead">JavaScript brings pages to life DOM manipulation, event handling, fetch API calls, and complex application logic, all running in the browser without a reload.</p>
+  </div>
+
+  <div class="split-50" style="margin-bottom:2rem">
+    <div class="code-block reveal">
+      <div class="cb-header"><div class="cb-dots"><span class="cd-r"></span><span class="cd-y"></span><span class="cd-g"></span></div><span class="cb-lang">JavaScript ES6+</span></div>
+      <div class="cb-body"><pre><span class="cmt">// DOM Manipulation</span>
+<span class="kw">const</span> btn = document
+  .<span class="fn">querySelector</span>(<span class="str">'#addBtn'</span>);
+
+btn.<span class="fn">addEventListener</span>(<span class="str">'click'</span>, () => {
+  <span class="kw">const</span> skills = [<span class="str">'HTML'</span>,<span class="str">'CSS'</span>,<span class="str">'JS'</span>];
+  <span class="kw">const</span> ul = document
+    .<span class="fn">getElementById</span>(<span class="str">'list'</span>);
+
+  ul.innerHTML = skills
+    .<span class="fn">map</span>(s => <span class="str">`&lt;li&gt;${s}&lt;/li&gt;`</span>)
+    .<span class="fn">join</span>(<span class="str">''</span>);
+});
+
+<span class="cmt">// Async / Fetch API</span>
+<span class="kw">async function</span> <span class="fn">fetchUser</span>() {
+  <span class="kw">const</span> res  = <span class="kw">await</span>
+    <span class="fn">fetch</span>(<span class="str">'/api/user/1'</span>);
+  <span class="kw">const</span> data = <span class="kw">await</span> res.<span class="fn">json</span>();
+  console.<span class="fn">log</span>(data.name);
+}
+
+<span class="cmt">// Arrow fn + destructuring</span>
+<span class="kw">const</span> <span class="fn">greet</span> = ({ name, role }) =>
+  <span class="str">`Hello, ${name} (${role})`</span>;
+
+<span class="fn">greet</span>({
+  name: <span class="str">'Aditi'</span>,
+  role: <span class="str">'Full Stack Dev'</span>
+});
+<span class="cmt">// → "Hello, Aditi (Full Stack Dev)"</span></pre></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1.2rem" class="reveal reveal-d1">
+      <div class="demo-frame">
+        <div class="demo-frame-header"><div class="df-dot"></div><span class="df-label">Demo 1 · Random Colour Generator</span></div>
+        <div class="demo-frame-body">
+          <div id="color-swatch">#4A90E2</div>
+          <button id="gen-color-btn" onclick="randomColour()">Generate Random Colour</button>
+        </div>
+      </div>
+      <div class="demo-frame">
+        <div class="demo-frame-header"><div class="df-dot"></div><span class="df-label">Demo 2 · Calculator</span></div>
+        <div class="demo-frame-body">
+          <div id="calc-screen">0</div>
+          <div class="calc-pad">
+            <button class="cp-btn cp-cl" onclick="cClear()">C</button>
+            <button class="cp-btn cp-cl" onclick="cDel()">⌫</button>
+            <button class="cp-btn cp-op" onclick="cIn('%')">%</button>
+            <button class="cp-btn cp-op" onclick="cIn('/')">÷</button>
+            <button class="cp-btn" onclick="cIn('7')">7</button><button class="cp-btn" onclick="cIn('8')">8</button><button class="cp-btn" onclick="cIn('9')">9</button>
+            <button class="cp-btn cp-op" onclick="cIn('*')">×</button>
+            <button class="cp-btn" onclick="cIn('4')">4</button><button class="cp-btn" onclick="cIn('5')">5</button><button class="cp-btn" onclick="cIn('6')">6</button>
+            <button class="cp-btn cp-op" onclick="cIn('-')">−</button>
+            <button class="cp-btn" onclick="cIn('1')">1</button><button class="cp-btn" onclick="cIn('2')">2</button><button class="cp-btn" onclick="cIn('3')">3</button>
+            <button class="cp-btn cp-op" onclick="cIn('+')">+</button>
+            <button class="cp-btn" onclick="cIn('0')" style="grid-column:span 2">0</button>
+            <button class="cp-btn" onclick="cIn('.')">.</button>
+            <button class="cp-btn cp-eq" onclick="cEq()">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-frame reveal">
+    <div class="demo-frame-header"><div class="df-dot"></div><span class="df-label">Demo 3 · To-Do List — DOM Manipulation &amp; Event Handling</span></div>
+    <div class="demo-frame-body">
+      <div id="todo-wrap">
+        <div id="todo-row">
+          <input type="text" id="todo-input" placeholder="Add a new task and press Enter…"/>
+          <button onclick="addTodo()">+ Add</button>
+        </div>
+        <ul id="todo-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2rem">
+    <div class="elegant-card reveal"><div class="ec-icon">🌳</div><div class="ec-title">DOM</div><div class="ec-body">Methods like <code>querySelector</code>, <code>createElement</code>, and <code>innerHTML</code> let JS dynamically update the page.</div></div>
+    <div class="elegant-card reveal reveal-d1"><div class="ec-icon">👂</div><div class="ec-title">Events</div><div class="ec-body"><code>addEventListener</code> responds to clicks, keypresses, and form submissions with callback functions.</div></div>
+    <div class="elegant-card reveal reveal-d2"><div class="ec-icon">🔄</div><div class="ec-title">Fetch API</div><div class="ec-body">Request data from servers without reloading. <code>async/await</code> keeps the syntax clean and readable.</div></div>
+    <div class="elegant-card reveal reveal-d3"><div class="ec-icon">📦</div><div class="ec-title">ES6+</div><div class="ec-body">Arrow functions, template literals, destructuring, and modules make modern JavaScript concise and expressive.</div></div>
+  </div>
+
+  <div class="page-nav-bar">
+    <a href="bootstrap.html" class="pnav-btn">← Bootstrap</a>
+    <span style="font-family:'DM Mono',monospace;font-size:.65rem;color:var(--muted);">5 / 5</span>
+    <a href="index.html" class="pnav-btn">↑ Back to Home</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span class="f-name"><em>Aditi</em> Kshetri</span>
+  <nav class="footer-nav"><a href="index.html">Home</a><a href="fullstack.html">Full Stack</a><a href="html.html">HTML</a><a href="css.html">CSS</a><a href="bootstrap.html">Bootstrap</a><a href="javascript.html">JavaScript</a></nav>
+  CET138 Full Stack Development · Assignment 1 · ePortfolio<br/>
+  <span style="margin-top:.5rem;display:block;color:rgba(220,232,245,.25)">Built with HTML · CSS · Bootstrap 5 · JavaScript</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script>
+  const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');}),{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+  function randomColour(){
+    const hex='#'+Math.floor(Math.random()*0xffffff).toString(16).padStart(6,'0');
+    const sw=document.getElementById('color-swatch');
+    sw.style.background=hex;sw.textContent=hex.toUpperCase();
+  }
+
+  let expr='';
+  function cIn(v){expr+=v;document.getElementById('calc-screen').textContent=expr;}
+  function cClear(){expr='';document.getElementById('calc-screen').textContent='0';}
+  function cDel(){expr=expr.slice(0,-1);document.getElementById('calc-screen').textContent=expr||'0';}
+  function cEq(){
+    try{const r=Function('"use strict";return('+expr+')')();document.getElementById('calc-screen').textContent=parseFloat(r.toFixed(10));expr=String(r);}
+    catch{document.getElementById('calc-screen').textContent='Error';expr='';}
+  }
+
+  function addTodo(){
+    const inp=document.getElementById('todo-input');
+    const txt=inp.value.trim();if(!txt)return;
+    const li=document.createElement('li');
+    li.innerHTML=`<span>${txt}</span><div class="td-actions"><button class="td-done" title="Done" onclick="this.closest('li').classList.toggle('done')">✓</button><button class="td-del" title="Remove" onclick="this.closest('li').remove()">✕</button></div>`;
+    document.getElementById('todo-list').prepend(li);
+    inp.value='';inp.focus();
+  }
+  document.getElementById('todo-input').addEventListener('keydown',e=>{if(e.key==='Enter')addTodo();});
+</script>
+</body>
+</html>
